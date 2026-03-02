@@ -1,0 +1,47 @@
+/*
+========================
+LINKEDLIST (java.util.LinkedList)
+========================
+
+¿QUÉ ES?
+- Implementación de List y Deque.
+- Estructura basada en nodos enlazados.
+- Permite duplicados.
+- Mantiene el orden de inserción.
+- Inserciones/eliminaciones rápidas en extremos.
+
+CUÁNDO USARLO
+- Cuando haces muchas inserciones/eliminaciones.
+- Cuando trabajas como cola (Queue) o pila (Stack).
+
+Import:
+import java.util.LinkedList;
+
+Declaración:
+LinkedList<Tipo> lista = new LinkedList<>();
+
+Ejemplo:
+LinkedList<Integer> numeros = new LinkedList<>();
+
+MÉTODOS MÁS COMUNES
+
+add(elemento);
+addFirst(elemento);
+addLast(elemento);
+
+remove();
+removeFirst();
+removeLast();
+
+get(indice);
+getFirst();
+getLast();
+
+size();
+isEmpty();
+clear();
+
+También puede usarse como:
+- Cola (Queue)
+- Pila (Stack)
+*/

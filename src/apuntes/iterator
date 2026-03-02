@@ -1,0 +1,36 @@
+/*
+========================
+ITERATOR (java.util.Iterator)
+========================
+
+¿QUÉ ES?
+- Objeto para recorrer colecciones.
+- Permite eliminar elementos mientras se recorre.
+
+Import:
+import java.util.Iterator;
+
+Sintaxis:
+
+Iterator<Tipo> it = coleccion.iterator();
+
+while(it.hasNext()) {
+    Tipo elemento = it.next();
+}
+
+MÉTODOS PRINCIPALES
+
+hasNext();   // ¿Hay siguiente?
+next();      // Devuelve siguiente
+remove();    // Elimina el último devuelto por next()
+
+Ejemplo:
+
+Iterator<String> it = nombres.iterator();
+while(it.hasNext()) {
+    String n = it.next();
+    if(n.equals("Juan")) {
+        it.remove();
+    }
+}
+*/

@@ -1,0 +1,45 @@
+/*
+========================
+MAPS (java.util.Map)
+========================
+
+¿QUÉ ES?
+- Estructura clave -> valor.
+- NO permite claves duplicadas.
+- Cada clave está asociada a un valor.
+
+IMPLEMENTACIÓN MÁS USADA
+HashMap (no mantiene orden)
+
+Import:
+import java.util.HashMap;
+import java.util.Map;
+
+Declaración:
+Map<TipoClave, TipoValor> mapa = new HashMap<>();
+
+Ejemplo:
+Map<String, Integer> edades = new HashMap<>();
+
+MÉTODOS MÁS COMUNES
+
+put(clave, valor);          // Inserta o reemplaza
+get(clave);                 // Obtiene valor
+remove(clave);              // Elimina
+containsKey(clave);         // Verifica clave
+containsValue(valor);       // Verifica valor
+size();
+isEmpty();
+clear();
+
+Recorrer:
+
+for(String clave : mapa.keySet()) { }
+
+for(Integer valor : mapa.values()) { }
+
+for(Map.Entry<String, Integer> entry : mapa.entrySet()) {
+    entry.getKey();
+    entry.getValue();
+}
+*/

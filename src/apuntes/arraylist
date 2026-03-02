@@ -1,0 +1,44 @@
+/*
+========================
+ARRAYLIST (java.util.ArrayList)
+========================
+
+¿QUÉ ES?
+- Implementación de la interfaz List.
+- Estructura dinámica basada en array redimensionable.
+- Permite elementos duplicados.
+- Mantiene el orden de inserción.
+- Acceso rápido por índice (O(1)).
+
+CUÁNDO USARLO
+- Cuando necesitas acceso rápido por posición.
+- Cuando haces muchas consultas y pocas inserciones/eliminaciones en medio.
+
+SINTAXIS BÁSICA
+
+Import:
+import java.util.ArrayList;
+
+Declaración:
+ArrayList<Tipo> lista = new ArrayList<>();
+
+Ejemplo:
+ArrayList<String> nombres = new ArrayList<>();
+
+MÉTODOS MÁS COMUNES
+
+add(elemento);              // Agrega al final
+add(indice, elemento);      // Inserta en posición específica
+get(indice);                // Obtiene elemento
+set(indice, elemento);      // Reemplaza elemento
+remove(indice);             // Elimina por índice
+remove(objeto);             // Elimina por valor
+size();                     // Tamaño
+isEmpty();                  // ¿Está vacía?
+contains(objeto);           // Verifica si existe
+clear();                    // Vacía la lista
+
+Recorrer:
+for(String n : nombres) { }
+for(int i = 0; i < nombres.size(); i++) { }
+*/

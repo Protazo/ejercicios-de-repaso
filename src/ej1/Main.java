@@ -76,9 +76,9 @@ public class Main {
                                 System.out.println("Dime el número de vuelo: ");
                                 String numero = scan.nextLine();
 
-                                for (Vuelos x : vueloslist) {
+                                /*for (Vuelos x : vueloslist) {
                                     x.g
-                                }
+                                }*/
 
                                 continuar = true;
                             } catch (Exception e) {

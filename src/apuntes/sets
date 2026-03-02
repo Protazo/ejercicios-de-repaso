@@ -1,0 +1,35 @@
+/*
+========================
+SETS (java.util.Set)
+========================
+
+¿QUÉ ES?
+- Colección que NO permite duplicados.
+- No tiene índice.
+- No garantiza orden (dependiendo implementación).
+
+IMPLEMENTACIÓN MÁS USADA
+HashSet (sin orden)
+
+Import:
+import java.util.HashSet;
+import java.util.Set;
+
+Declaración:
+Set<Tipo> conjunto = new HashSet<>();
+
+Ejemplo:
+Set<String> alumnos = new HashSet<>();
+
+MÉTODOS MÁS COMUNES
+
+add(elemento);        // Agrega si no existe
+remove(elemento);     // Elimina
+contains(elemento);   // Verifica existencia
+size();
+isEmpty();
+clear();
+
+Recorrer:
+for(String a : alumnos) { }
+*/
