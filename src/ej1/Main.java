@@ -1,4 +1,5 @@
-import java.util.Iterator;
+package ej1;
+
 import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.Scanner;
