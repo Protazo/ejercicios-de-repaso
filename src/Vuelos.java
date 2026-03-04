@@ -19,6 +19,8 @@ public class Vuelos {
         this.tipo = tipo;
     }
 
+
+
     public String getNumero() {
         return numero;
     }

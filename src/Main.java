@@ -21,9 +21,9 @@ public class Main {
 
     public static ListIterator<Vuelos> hacervuelos(LinkedList<Vuelos> vuelos) {
         Vuelos vuelo01 = new Vuelos("2023-01", "Valencia", "Menorca", "15-08", Vuelos.Tipo.TURISTA);
-        Vuelos vuelo02 = new Vuelos("2023-02", "Valencia", "Tenerife", "15-08", Vuelos.Tipo.TURISTA);
+        Vuelos vuelo02 = new Vuelos("2023-02", "Valencia", "Tenerife", "20-08", Vuelos.Tipo.TURISTA);
         Vuelos vuelo03 = new Vuelos("2023-03", "París", "Valencia", "15-08", Vuelos.Tipo.PRIMERA);
-        Vuelos vuelo04 = new Vuelos("2023-04", "Atenas", "Valencia", "15-08", Vuelos.Tipo.PRIMERA);
+        Vuelos vuelo04 = new Vuelos("2023-04", "Atenas", "Valencia", "20-08", Vuelos.Tipo.PRIMERA);
 
         vuelos.add(vuelo01);
         vuelos.add(vuelo02);
@@ -52,6 +52,7 @@ public class Main {
             try {
 
                 opcion = scan.nextInt();
+                scan.nextLine();
                 switch (opcion) {
 
                     case 0 -> repetir = false;
@@ -67,6 +68,7 @@ public class Main {
                     }
 
                     case 2 -> {
+
                         boolean continuar = false;
                         do {
                             try {
@@ -74,15 +76,174 @@ public class Main {
                                 System.out.println("Dime el número de vuelo: ");
                                 String numero = scan.nextLine();
 
-                                /*for (Vuelos x : vueloslist) {
-                                    x.g
-                                }*/
+                                boolean encontrado = false;
+                                if (vueloslist.size() != 0) {
+                                    for (Vuelos x : vueloslist) {
+                                        if (x.getNumero().equals(numero)) {
+                                            System.out.println("Datos del vuelo");
+                                            System.out.println("Número: " + x.getNumero() + " Origen: " + x.getOrigen() + " Destino: " + x.getDestino() + " Día: " + x.getDia() + " Clase: " + x.getTipo());
+                                            encontrado = true;
+                                        }
+                                    }
+                                }
+                                if (!encontrado) {
+                                    System.out.println("El número de vuelo no se ha encontrado");
+                                }
 
                                 continuar = true;
                             } catch (Exception e) {
                                 System.out.println("ERROR, repite");
                                 continuar = false;
                             }
+                        } while (!continuar);
+                    }
+
+                    case 3 -> {
+                        boolean continuar = false;
+                        do {
+
+                            try {
+
+                                System.out.println("Dime la clave por la que quieres buscar un vuelo: ");
+                                System.out.println("Claves disponibles: numero, origen, destino, dia, clase");
+                                String clave = scan.nextLine();
+
+                                switch (clave) {
+                                    case "numero" -> {
+                                        System.out.println("Ahora escribe el número de vuelo: ");
+                                        String opcion2 = scan.nextLine();
+
+                                        boolean encontrado = false;
+                                        if (vueloslist.size() != 0) {
+                                            for (Vuelos x : vueloslist) {
+                                                if (x.getNumero().equals(opcion2)) {
+                                                    encontrado = true;
+                                                    System.out.println("Datos del vuelo");
+                                                    System.out.println("Número: " + x.getNumero() + " Origen: " + x.getOrigen() + " Destino: " + x.getDestino() + " Día: " + x.getDia() + " Clase: " + x.getTipo());
+                                                }
+                                            }
+                                        }
+                                        if (!encontrado) {
+                                            System.out.println("El vuelo no se ha encontrado");
+                                        }
+
+                                    }
+
+                                    case "origen" -> {
+                                        System.out.println("Ahora escribe el origen del vuelo: ");
+                                        String opcion2 = scan.nextLine();
+
+                                        boolean encontrado = false;
+                                        if (vueloslist.size() != 0) {
+                                            for (Vuelos x : vueloslist) {
+                                                if (x.getOrigen().equals(opcion2)) {
+                                                    encontrado = true;
+                                                    System.out.println("Datos del vuelo");
+                                                    System.out.println("Número: " + x.getNumero() + " Origen: " + x.getOrigen() + " Destino: " + x.getDestino() + " Día: " + x.getDia() + " Clase: " + x.getTipo());
+                                                }
+                                            }
+                                        }
+                                        if (!encontrado) {
+                                            System.out.println("El vuelo no se ha encontrado");
+                                        }
+
+                                    }
+
+                                    case "destino" -> {
+                                        System.out.println("Ahora escribe el destino del vuelo: ");
+                                        String opcion2 = scan.nextLine();
+
+                                        boolean encontrado = false;
+                                        if (vueloslist.size() != 0) {
+                                            for (Vuelos x : vueloslist) {
+                                                if (x.getDestino().equals(opcion2)) {
+                                                    encontrado = true;
+                                                    System.out.println("Datos del vuelo");
+                                                    System.out.println("Número: " + x.getNumero() + " Origen: " + x.getOrigen() + " Destino: " + x.getDestino() + " Día: " + x.getDia() + " Clase: " + x.getTipo());
+                                                }
+                                            }
+                                        }
+                                        if (!encontrado) {
+                                            System.out.println("El vuelo no se ha encontrado");
+                                        }
+
+                                    }
+
+                                    case "dia" -> {
+                                        System.out.println("Ahora escribe el dia y mes del vuelo: (xx-x)");
+                                        String opcion2 = scan.nextLine();
+
+                                        boolean encontrado = false;
+                                        if (vueloslist.size() != 0) {
+                                            for (Vuelos x : vueloslist) {
+                                                if (x.getDia().equals(opcion2)) {
+                                                    encontrado = true;
+                                                    System.out.println("Datos del vuelo");
+                                                    System.out.println("Número: " + x.getNumero() + " Origen: " + x.getOrigen() + " Destino: " + x.getDestino() + " Día: " + x.getDia() + " Clase: " + x.getTipo());
+                                                }
+                                            }
+                                        }
+                                        if (!encontrado) {
+                                            System.out.println("El vuelo no se ha encontrado");
+                                        }
+
+                                    }
+                                    case "clase" -> {
+                                        System.out.println("Ahora escribe la clase del vuelo: (TURISTA o PRIMERA)");
+                                        String opcion2 = scan.nextLine();
+
+                                        boolean encontrado = false;
+                                        if (vueloslist.size() != 0) {
+                                            for (Vuelos x : vueloslist) {
+                                                if (x.getTipo().equals(opcion2)) {
+                                                    encontrado = true;
+                                                    System.out.println("Datos del vuelo");
+                                                    System.out.println("Número: " + x.getNumero() + " Origen: " + x.getOrigen() + " Destino: " + x.getDestino() + " Día: " + x.getDia() + " Clase: " + x.getTipo());
+                                                }
+                                            }
+                                        }
+                                        if (!encontrado) {
+                                            System.out.println("El vuelo no se ha encontrado");
+                                        }
+
+                                    }
+                                }
+
+                                continuar = true;
+                            } catch (Exception e) {
+                                System.out.println("ERROR, repite");
+                            }
+
+                        } while (!continuar);
+                    }
+
+                    case 4 -> {
+                        boolean continuar = false;
+                        do {
+
+                            try {
+
+
+
+                            } catch (Exception e) {
+                                System.out.println("ERROR, repite");
+                            }
+
+                        } while (!continuar);
+                    }
+
+                    case 5 -> {
+                        boolean continuar = false;
+                        do {
+
+                            try {
+
+
+
+                            } catch (Exception e) {
+                                System.out.println("ERROR, repite");
+                            }
+
                         } while (!continuar);
                     }
 
